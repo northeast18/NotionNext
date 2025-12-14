@@ -1,0 +1,14 @@
+name: Auto Deploy to Cloudflare
+
+on:
+  schedule:
+    # 每天北京时间凌晨 4 点 (UTC 20:00) 执行一次，你可以自己改
+    - cron: '0 20 * * *'
+  workflow_dispatch: # 允许你在 GitHub 界面手动点击按钮触发
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Cloudflare Deploy
+        run: curl -X POST "${{ secrets.CF_DEPLOY_HOOK }}"

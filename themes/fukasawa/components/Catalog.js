@@ -68,7 +68,10 @@ const Catalog = ({ toc }) => {
         ref={tRef}
         className='flex-1 overflow-auto  overscroll-none scroll-hidden   text-black mb-6'>
         {toc.map(tocItem => {
-          const id = uuidToId(tocItem.id)
+          if (!tocItem.id) {
+                return null
+              }
+            const id = uuidToId(tocItem.id)
           return (
             <a
               key={id}

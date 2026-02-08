@@ -70,6 +70,10 @@ const Toc = ({ toc }) => {
         ref={tRef}>
         <nav className='h-full  text-black dark:text-gray-300'>
           {toc.map(tocItem => {
+            // 跳过没有 id 的目录项
+            if (!tocItem.id) {
+              return null
+            }
             const id = uuidToId(tocItem.id)
             tocIds.push(id)
             return (

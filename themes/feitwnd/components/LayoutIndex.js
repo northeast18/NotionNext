@@ -128,7 +128,7 @@ const ArticleCard = ({ post }) => {
 
                 {/* Title */}
                 <Link href={`/${post.slug}`}>
-                    <h2 className="text-lg md:text-xl font-medium text-gray-700 dark:text-gray-200 mb-2 line-clamp-2 group-hover:text-blue-500 transition-colors leading-snug">
+                    <h2 className="text-lg md:text-xl font-medium text-black dark:text-gray-100 mb-2 line-clamp-2 group-hover:text-blue-500 transition-colors leading-snug">
                         {post.title}
                     </h2>
                 </Link>

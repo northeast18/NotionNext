@@ -28,7 +28,7 @@ export default function SideRight(props) {
                         {locale.COMMON.ANNOUNCEMENT}
                     </div>
                     <div className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed [&_p]:my-1">
-                        <NotionPage post={notice} className="text-center" />
+                        <NotionPage post={notice} />
                     </div>
                 </div>
             )}

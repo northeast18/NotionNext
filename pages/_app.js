@@ -12,6 +12,7 @@ import { getBaseLayoutByTheme } from '@/themes/theme'
 import { useRouter } from 'next/router'
 import { useCallback, useMemo } from 'react'
 import { getQueryParam } from '../lib/utils'
+import { siteConfig } from '@/lib/config'
 
 // 各种扩展插件 这个要阻塞引入
 import BLOG from '@/blog.config'
@@ -37,8 +38,7 @@ const MyApp = ({ Component, pageProps }) => {
   const theme = useMemo(() => {
     return (
       getQueryParam(route.asPath, 'theme') ||
-      pageProps?.NOTION_CONFIG?.THEME ||
-      BLOG.THEME
+      siteConfig('THEME', BLOG.THEME, pageProps?.NOTION_CONFIG)
     )
   }, [route])
 

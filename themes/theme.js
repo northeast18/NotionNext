@@ -9,6 +9,32 @@ import { getQueryParam, getQueryVariable, isBrowser } from '../lib/utils'
 export const { THEMES = [] } = getConfig()?.publicRuntimeConfig || {}
 
 /**
+ * 主题配置映射表，用于动态加载主题配置
+ */
+export const THEME_CONFIG_MAP = {
+  example: require('@/themes/example/config').default,
+  fukasawa: require('@/themes/fukasawa/config').default,
+  heo: require('@/themes/heo/config').default,
+  hexo: require('@/themes/hexo/config').default,
+  next: require('@/themes/next/config').default,
+  nobelium: require('@/themes/nobelium/config').default,
+  matery: require('@/themes/matery/config').default,
+  medium: require('@/themes/medium/config').default,
+  starter: require('@/themes/starter/config').default,
+  plog: require('@/themes/plog/config').default,
+  photo: require('@/themes/photo/config').default,
+  landing: require('@/themes/landing/config').default,
+  gitbook: require('@/themes/gitbook/config').default,
+  magzine: require('@/themes/magzine/config').default,
+  typography: require('@/themes/typography/config').default,
+  commerce: require('@/themes/commerce/config').default,
+  proxio: require('@/themes/proxio/config').default,
+  nav: require('@/themes/nav/config').default,
+  game: require('@/themes/game/config').default,
+  feitwnd: require('@/themes/feitwnd/config').default
+}
+
+/**
  * 获取主题配置
  * @param {string} themeQuery - 主题查询参数（支持多个主题用逗号分隔）
  * @returns {Promise<object>} 主题配置对象
@@ -26,7 +52,7 @@ export const getThemeConfig = async themeQuery => {
         const THEME_CONFIG = await import(`@/themes/${themeName}`)
           .then(m => m.THEME_CONFIG)
           .catch(err => {
-            console.error(`Failed to load theme ${themeName}:`, err)
+            console.error(`Failed to load theme ${themeName}: `, err)
             return null // 主题加载失败时返回 null 或者其他默认值
           })
 
@@ -36,14 +62,14 @@ export const getThemeConfig = async themeQuery => {
         } else {
           // 如果加载失败，返回默认主题配置
           console.warn(
-            `Loading ${themeName} failed. Falling back to default theme.`
+            `Loading ${themeName} failed.Falling back to default theme.`
           )
           return ThemeComponents?.THEME_CONFIG
         }
       } catch (error) {
         // 如果 import 过程中出现异常，返回默认主题配置
         console.error(
-          `Error loading theme configuration for ${themeName}:`,
+          `Error loading theme configuration for ${themeName}: `,
           error
         )
         return ThemeComponents?.THEME_CONFIG

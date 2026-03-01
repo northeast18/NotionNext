@@ -1,0 +1,148 @@
+
+> notion-next@4.9.3.1 dev
+> next dev
+
+Deleted existing sitemap.xml from public directory
+Deleted existing sitemap.xml from root directory
+ 鈿?Port 3000 is in use, trying 3001 instead.
+ 鈿?Port 3001 is in use, trying 3002 instead.
+ 鈿?Port 3002 is in use, trying 3003 instead.
+ 鈿?Port 3003 is in use, trying 3004 instead.
+ 鈿?Port 3004 is in use, trying 3005 instead.
+ 鈿?Port 3005 is in use, trying 3006 instead.
+ 鈿?Port 3006 is in use, trying 3007 instead.
+ 鈿?Port 3007 is in use, trying 3008 instead.
+  鈻?Next.js 14.2.30
+  - Local:        http://localhost:3008
+  - Experiments (use with caution):
+    路 scrollRestoration
+
+ 鉁?Starting...
+[Locales] 02ab3b8678004aa69e9e415905ef32a5
+[Locales] en:7c1d570661754c8fbc568e00a01fd70e
+[榛樿涓婚] E:\work\NotionNext\themes\feitwnd
+ 鉁?Ready in 3.6s
+ 鉁?Compiled /middleware in 221ms (215 modules)
+ 鈼?Compiling / ...
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+ 鉁?Compiled / in 14.2s (2914 modules)
+ 鉁?Compiled in 10.3s (2914 modules)
+[API-->>璇锋眰] from:index id:02ab3b8678004aa69e9e415905ef32a5 
+[API<<--鍝嶅簲] 鑰楁椂:5743ms - from:index
+[API-->>璇锋眰] from:config-table id:8f4fe6b1-7a9e-43e0-bcfb-6edb50f10a62 
+[API<<--鍝嶅簲] 鑰楁椂:1281ms - from:config-table
+[API-->>璇锋眰] from:data-notice id:571f2540-eb8a-42ee-84f5-85f1583430ae 
+[API<<--鍝嶅簲] 鑰楁椂:564ms - from:data-notice
+[RSS璁㈤槄] 鐢熸垚/rss/feed.xml
+[API-->>璇锋眰] from:rss-content id:a6271da0-6b8f-47a3-9735-e8fa770f1d9f 
+[API<<--鍝嶅簲] 鑰楁椂:4343ms - from:rss-content
+TypeError: Cannot read properties of undefined (reading 'replaceAll')
+    at uuidToId (file:///E:/work/NotionNext/node_modules/notion-utils/build/index.js:533:31)
+    at Block (file:///E:/work/NotionNext/node_modules/react-notion-x/build/index.js:2579:66)
+    at renderWithHooks (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5662:16)
+    at renderIndeterminateComponent (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5736:15)
+    at renderElement (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5961:7)
+    at renderNodeDestructiveImpl (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6119:11)
+    at renderNodeDestructive (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6091:14)
+    at renderIndeterminateComponent (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5790:7)
+    at renderElement (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5961:7)
+    at renderNodeDestructiveImpl (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6119:11)
+    at renderNodeDestructive (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6091:14)
+    at renderContextProvider (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5935:3)
+    at renderElement (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6032:11)
+    at renderNodeDestructiveImpl (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6119:11)
+    at renderNodeDestructive (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6091:14)
+ 猕?unhandledRejection: TypeError: Cannot read properties of undefined (reading 'replaceAll')
+    at uuidToId (file:///E:/work/NotionNext/node_modules/notion-utils/build/index.js:533:31)
+    at Block (file:///E:/work/NotionNext/node_modules/react-notion-x/build/index.js:2579:66)
+    at renderWithHooks (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5662:16)
+    at renderIndeterminateComponent (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5736:15)
+    at renderElement (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5961:7)
+    at renderNodeDestructiveImpl (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6119:11)
+    at renderNodeDestructive (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6091:14)
+    at renderIndeterminateComponent (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5790:7)
+    at renderElement (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5961:7)
+    at renderNodeDestructiveImpl (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6119:11)
+    at renderNodeDestructive (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6091:14)
+    at renderContextProvider (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5935:3)
+    at renderElement (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6032:11)
+    at renderNodeDestructiveImpl (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6119:11)
+    at renderNodeDestructive (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6091:14)
+ 猕?unhandledRejection: TypeError: Cannot read properties of undefined (reading 'replaceAll')
+    at uuidToId (file:///E:/work/NotionNext/node_modules/notion-utils/build/index.js:533:31)
+    at Block (file:///E:/work/NotionNext/node_modules/react-notion-x/build/index.js:2579:66)
+    at renderWithHooks (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5662:16)
+    at renderIndeterminateComponent (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5736:15)
+    at renderElement (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5961:7)
+    at renderNodeDestructiveImpl (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6119:11)
+    at renderNodeDestructive (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6091:14)
+    at renderIndeterminateComponent (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5790:7)
+    at renderElement (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5961:7)
+    at renderNodeDestructiveImpl (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6119:11)
+    at renderNodeDestructive (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6091:14)
+    at renderContextProvider (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5935:3)
+    at renderElement (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6032:11)
+    at renderNodeDestructiveImpl (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6119:11)
+    at renderNodeDestructive (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6091:14)
+ 鉁?Compiled in 2.2s (2914 modules)
+[API-->>璇锋眰] from:index id:02ab3b8678004aa69e9e415905ef32a5 
+[API<<--鍝嶅簲] 鑰楁椂:4166ms - from:index
+[API-->>璇锋眰] from:config-table id:8f4fe6b1-7a9e-43e0-bcfb-6edb50f10a62 
+[API<<--鍝嶅簲] 鑰楁椂:1277ms - from:config-table
+[API-->>璇锋眰] from:data-notice id:571f2540-eb8a-42ee-84f5-85f1583430ae 
+[API<<--鍝嶅簲] 鑰楁椂:1245ms - from:data-notice
+[RSS璁㈤槄] 鐢熸垚/rss/feed.xml
+[API-->>璇锋眰] from:rss-content id:a6271da0-6b8f-47a3-9735-e8fa770f1d9f 
+ GET / 200 in 6826ms
+[API<<--鍝嶅簲] 鑰楁椂:3590ms - from:rss-content
+TypeError: Cannot read properties of undefined (reading 'replaceAll')
+    at uuidToId (file:///E:/work/NotionNext/node_modules/notion-utils/build/index.js:533:31)
+    at Block (file:///E:/work/NotionNext/node_modules/react-notion-x/build/index.js:2579:66)
+    at renderWithHooks (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5662:16)
+    at renderIndeterminateComponent (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5736:15)
+    at renderElement (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5961:7)
+    at renderNodeDestructiveImpl (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6119:11)
+    at renderNodeDestructive (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6091:14)
+    at renderIndeterminateComponent (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5790:7)
+    at renderElement (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5961:7)
+    at renderNodeDestructiveImpl (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6119:11)
+    at renderNodeDestructive (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6091:14)
+    at renderContextProvider (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5935:3)
+    at renderElement (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6032:11)
+    at renderNodeDestructiveImpl (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6119:11)
+    at renderNodeDestructive (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6091:14)
+ 猕?unhandledRejection: TypeError: Cannot read properties of undefined (reading 'replaceAll')
+    at uuidToId (file:///E:/work/NotionNext/node_modules/notion-utils/build/index.js:533:31)
+    at Block (file:///E:/work/NotionNext/node_modules/react-notion-x/build/index.js:2579:66)
+    at renderWithHooks (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5662:16)
+    at renderIndeterminateComponent (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5736:15)
+    at renderElement (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5961:7)
+    at renderNodeDestructiveImpl (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6119:11)
+    at renderNodeDestructive (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6091:14)
+    at renderIndeterminateComponent (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5790:7)
+    at renderElement (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5961:7)
+    at renderNodeDestructiveImpl (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6119:11)
+    at renderNodeDestructive (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6091:14)
+    at renderContextProvider (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5935:3)
+    at renderElement (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6032:11)
+    at renderNodeDestructiveImpl (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6119:11)
+    at renderNodeDestructive (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6091:14)
+ 猕?unhandledRejection: TypeError: Cannot read properties of undefined (reading 'replaceAll')
+    at uuidToId (file:///E:/work/NotionNext/node_modules/notion-utils/build/index.js:533:31)
+    at Block (file:///E:/work/NotionNext/node_modules/react-notion-x/build/index.js:2579:66)
+    at renderWithHooks (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5662:16)
+    at renderIndeterminateComponent (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5736:15)
+    at renderElement (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5961:7)
+    at renderNodeDestructiveImpl (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6119:11)
+    at renderNodeDestructive (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6091:14)
+    at renderIndeterminateComponent (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5790:7)
+    at renderElement (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5961:7)
+    at renderNodeDestructiveImpl (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6119:11)
+    at renderNodeDestructive (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6091:14)
+    at renderContextProvider (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:5935:3)
+    at renderElement (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6032:11)
+    at renderNodeDestructiveImpl (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6119:11)
+    at renderNodeDestructive (E:\work\NotionNext\node_modules\react-dom\cjs\react-dom-server-legacy.node.development.js:6091:14)
+ 鉁?Compiled in 1277ms (2880 modules)

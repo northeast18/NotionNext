@@ -27,27 +27,27 @@ export function InfoCard(props) {
             </div>
 
             {/* Author & Bio */}
-            <div className='font-bold text-lg pb-1 text-gray-800 dark:text-white'>{siteConfig('AUTHOR')}</div>
+            <div className='font-medium text-lg pb-1 text-gray-700 dark:text-white'>{siteConfig('AUTHOR')}</div>
             <div className='text-sm text-gray-500 dark:text-gray-400 mb-5 leading-relaxed'>{siteConfig('BIO')}</div>
 
             {/* Stats */}
             <div className='flex justify-center gap-5 text-sm text-gray-600 dark:text-gray-400 mb-5 pb-5 border-b border-gray-100 dark:border-gray-700'>
                 <div className="flex flex-col items-center cursor-pointer hover:text-blue-500" onClick={() => router.push('/archive')}>
-                    <span className="font-bold text-base">{postCount || latestPosts?.length || 0}</span>
+                    <span className="font-semibold text-base text-gray-700 dark:text-gray-300">{postCount || latestPosts?.length || 0}</span>
                     <span className="text-xs text-gray-400">文章</span>
                 </div>
                 <div className="flex flex-col items-center cursor-pointer hover:text-blue-500" onClick={() => router.push('/category')}>
-                    <span className="font-bold text-base">{categoryOptions?.length || 0}</span>
+                    <span className="font-semibold text-base text-gray-700 dark:text-gray-300">{categoryOptions?.length || 0}</span>
                     <span className="text-xs text-gray-400">分类</span>
                 </div>
                 <div className="flex flex-col items-center cursor-pointer hover:text-blue-500" onClick={() => router.push('/tag')}>
-                    <span className="font-bold text-base">{tagOptions?.length || 0}</span>
+                    <span className="font-semibold text-base text-gray-700 dark:text-gray-300">{tagOptions?.length || 0}</span>
                     <span className="text-xs text-gray-400">标签</span>
                 </div>
             </div>
 
             {/* Social Links */}
-            <div className='flex justify-center flex-wrap gap-3 text-lg text-gray-500 dark:text-gray-400'>
+            <div className='flex justify-center flex-wrap gap-5 text-lg text-gray-500 dark:text-gray-400'>
                 {CONTACT_GITHUB && (
                     <a target='_blank' rel='noreferrer' title='GitHub' href={CONTACT_GITHUB}>
                         <i className='fab fa-github hover:text-gray-900 dark:hover:text-white transition-colors duration-200' />

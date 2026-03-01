@@ -4,6 +4,7 @@ import Comment from '@/components/Comment'
 import { useGlobal } from '@/lib/global'
 import SideRight from './SideRight'
 import { InfoCard } from './InfoCard'
+import LazyImage from '@/components/LazyImage'
 
 export const LayoutSlug = (props) => {
     const { post, lock, validPassword } = props
@@ -28,23 +29,23 @@ export const LayoutSlug = (props) => {
                     <InfoCard {...props} />
 
                     {/* 站点统计 */}
-                    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-4 border border-gray-100 dark:border-gray-700">
-                        <div className="flex items-center gap-1.5 text-sm text-gray-700 dark:text-gray-300 font-semibold mb-3">
-                            <i className="fas fa-chart-bar text-blue-500 text-xs" />
+                    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-5 border border-gray-100 dark:border-gray-700">
+                        <div className="flex items-center gap-2 text-base text-gray-800 dark:text-gray-200 font-bold mb-5">
+                            <i className="fas fa-chart-bar text-gray-500" />
                             站点统计
                         </div>
-                        <div className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                        <div className="space-y-4 text-sm">
                             <div className="flex items-center justify-between">
-                                <span><i className="far fa-file-alt mr-1.5 opacity-60" />文章总数</span>
-                                <span className="font-medium text-gray-800 dark:text-gray-200">{props.postCount || 0}</span>
+                                <span className="text-gray-500 dark:text-gray-400">文章总数</span>
+                                <span className="text-gray-700 dark:text-gray-200">{props.postCount || 0}</span>
                             </div>
                             <div className="flex items-center justify-between">
-                                <span><i className="far fa-folder mr-1.5 opacity-60" />分类数</span>
-                                <span className="font-medium text-gray-800 dark:text-gray-200">{props.categoryOptions?.length || 0}</span>
+                                <span className="text-gray-500 dark:text-gray-400">分类数</span>
+                                <span className="text-gray-700 dark:text-gray-200">{props.categoryOptions?.length || 0}</span>
                             </div>
                             <div className="flex items-center justify-between">
-                                <span><i className="far fa-bookmark mr-1.5 opacity-60" />标签数</span>
-                                <span className="font-medium text-gray-800 dark:text-gray-200">{props.tagOptions?.length || 0}</span>
+                                <span className="text-gray-500 dark:text-gray-400">标签数</span>
+                                <span className="text-gray-700 dark:text-gray-200">{props.tagOptions?.length || 0}</span>
                             </div>
                         </div>
                     </div>
@@ -56,13 +57,13 @@ export const LayoutSlug = (props) => {
                     {/* Header / Hero */}
                     {post.pageCover && (
                         <div className="w-full h-64 md:h-96 overflow-hidden relative">
-                            <img
+                            <LazyImage
                                 src={post.pageCover}
                                 alt={post.title}
                                 className="w-full h-full object-cover"
                             />
                             <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-8 text-white">
-                                <h1 className="text-3xl md:text-5xl font-bold mb-4">{post.title}</h1>
+                                <h1 className="text-3xl md:text-4xl font-medium mb-4">{post.title}</h1>
                                 <div className="flex flex-wrap items-center gap-4 text-sm opacity-90">
                                     {post.publishDay && (
                                         <span className="flex items-center gap-1">
@@ -83,8 +84,8 @@ export const LayoutSlug = (props) => {
                     )}
 
                     {!post.pageCover && (
-                        <div className="px-8 pt-12 pb-6 border-b border-gray-100 dark:border-gray-700">
-                            <h1 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
+                        <div className="px-8 pt-10 pb-4 border-b border-gray-100 dark:border-gray-700">
+                            <h1 className="text-3xl md:text-4xl font-medium mb-4 text-gray-800 dark:text-gray-100">
                                 {post.title}
                             </h1>
                             <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-gray-400">

@@ -3,6 +3,7 @@ import { siteConfig } from '@/lib/config'
 import { useGlobal } from '@/lib/global'
 import SideRight from './SideRight'
 import { InfoCard } from './InfoCard'
+import LazyImage from '@/components/LazyImage'
 
 /**
  * 基于字符串的简单确定性哈希，确保 SSR 与 CSR 一致
@@ -37,23 +38,23 @@ export const LayoutIndex = (props) => {
                     <InfoCard {...props} />
 
                     {/* 站点统计 */}
-                    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-4 border border-gray-100 dark:border-gray-700">
-                        <div className="flex items-center gap-1.5 text-sm text-gray-700 dark:text-gray-300 font-semibold mb-3">
-                            <i className="fas fa-chart-bar text-blue-500 text-xs" />
+                    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-5 border border-gray-100 dark:border-gray-700">
+                        <div className="flex items-center gap-2 text-base text-gray-800 dark:text-gray-200 font-bold mb-5">
+                            <i className="fas fa-chart-bar text-gray-500" />
                             站点统计
                         </div>
-                        <div className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                        <div className="space-y-4 text-sm">
                             <div className="flex items-center justify-between">
-                                <span><i className="far fa-file-alt mr-1.5 opacity-60" />文章总数</span>
-                                <span className="font-medium text-gray-800 dark:text-gray-200">{props.postCount || 0}</span>
+                                <span className="text-gray-500 dark:text-gray-400">文章总数</span>
+                                <span className="text-gray-700 dark:text-gray-200">{props.postCount || 0}</span>
                             </div>
                             <div className="flex items-center justify-between">
-                                <span><i className="far fa-folder mr-1.5 opacity-60" />分类数</span>
-                                <span className="font-medium text-gray-800 dark:text-gray-200">{props.categoryOptions?.length || 0}</span>
+                                <span className="text-gray-500 dark:text-gray-400">分类数</span>
+                                <span className="text-gray-700 dark:text-gray-200">{props.categoryOptions?.length || 0}</span>
                             </div>
                             <div className="flex items-center justify-between">
-                                <span><i className="far fa-bookmark mr-1.5 opacity-60" />标签数</span>
-                                <span className="font-medium text-gray-800 dark:text-gray-200">{props.tagOptions?.length || 0}</span>
+                                <span className="text-gray-500 dark:text-gray-400">标签数</span>
+                                <span className="text-gray-700 dark:text-gray-200">{props.tagOptions?.length || 0}</span>
                             </div>
                         </div>
                     </div>
@@ -101,7 +102,7 @@ const ArticleCard = ({ post }) => {
             {/* Image Cover - smaller */}
             {showPageCover && (
                 <Link href={`/${post.slug}`} className="w-full md:w-52 h-40 md:h-auto relative overflow-hidden flex-shrink-0">
-                    <img
+                    <LazyImage
                         src={post.pageCoverThumbnail}
                         alt={post.title}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -127,13 +128,13 @@ const ArticleCard = ({ post }) => {
 
                 {/* Title */}
                 <Link href={`/${post.slug}`}>
-                    <h2 className="text-lg md:text-xl font-bold text-gray-800 dark:text-gray-100 mb-2 line-clamp-2 group-hover:text-blue-500 transition-colors leading-snug">
+                    <h2 className="text-lg md:text-xl font-medium text-gray-700 dark:text-gray-200 mb-2 line-clamp-2 group-hover:text-blue-500 transition-colors leading-snug">
                         {post.title}
                     </h2>
                 </Link>
 
                 {/* Summary */}
-                <p className="text-sm text-gray-500 dark:text-gray-400 line-clamp-2 mb-3 leading-relaxed">
+                <p className="text-base text-gray-600 dark:text-gray-300 line-clamp-2 mb-3 leading-relaxed">
                     {post.summary || post.title}
                 </p>
 
